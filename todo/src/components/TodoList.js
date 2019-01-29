@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { addNewTodo, toggleTodo } from '../actions';
+import { addNewTodo, toggleTodo, deleteItem } from '../actions';
 
 class TodoList extends React.Component {
   state = {
@@ -32,13 +32,17 @@ class TodoList extends React.Component {
               {todo.thing}
             </h4>
           ))}
+          {/* <Button>
+          DELETE
+          </Button> */}
         </div>
         <input
           type="text"
           value={this.state.newTodo}
           onChange={this.handleChanges}
         />
-        <button onClick={this.addTodo}>Add Todo</button>
+        <br></br>
+        <button onClick={this.addTodo}>ADD TODO</button>
       </>
     );
   }

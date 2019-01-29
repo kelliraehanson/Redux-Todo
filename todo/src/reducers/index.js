@@ -1,4 +1,3 @@
-// import { UPDATE_TITLE, ADD_TODO } from '../actions';
 import { UPDATE_TITLE, ADD_TODO, TOGGLE_TODO } from '../actions';
 
 const initialState = {
@@ -42,6 +41,13 @@ function reducer(state = initialState, action) {
             : todo
         )
       };
+
+    //   case DELETE_ITEM: 
+    //   return {
+    //       ...state,
+    //       todos: state.todos.
+
+    //   }
     default:
       return state;
   }

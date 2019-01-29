@@ -28,7 +28,8 @@ class TodoTitle extends React.Component {
           onChange={this.handleChanges}
         />
 		<br></br>
-        <button onClick={this.updateTitle}>Update title</button>
+		<br></br>
+        <button onClick={this.updateTitle}>UPDATE TITLE</button>
       </div>
     );
   }

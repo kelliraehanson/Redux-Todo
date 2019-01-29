@@ -1,6 +1,7 @@
 export const UPDATE_TITLE = 'UPDATE_TITLE';
 export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const DELETE_ITEM = 'DELETE_ITEM';
 
 export function updateTitle(newTitle) {
     console.log('action', newTitle);
@@ -25,3 +26,13 @@ export function toggleTodo(index) {
       payload: index
     };
   }
+
+  export function deleteItem(index) {
+      console.log('delete action', index);
+      return {
+          type: DELETE_ITEM,
+          payload: index
+      };
+  }
+
+
