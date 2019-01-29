@@ -23,18 +23,26 @@ class TodoList extends React.Component {
 
   };
 
+  deleteItem = (e, index) => {
+      e.preventDefault();
+      this.props.deleteItem(index)
+  }
+
   render() {
+
     return (
       <>
         <div>
           {this.props.todos.map((todo, index) => (
+              <div>
             <h4 onClick={e => this.toggleTodo(e, index)} key={index}>
               {todo.thing}
             </h4>
+            <button onClick={e => this.deleteItem(e, index)} key={index}>
+            DELETE
+            </button>
+            </div>
           ))}
-          {/* <Button>
-          DELETE
-          </Button> */}
         </div>
         <input
           type="text"
@@ -54,5 +62,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { addNewTodo, toggleTodo }
+  { addNewTodo, toggleTodo, deleteItem }
 )(TodoList);
