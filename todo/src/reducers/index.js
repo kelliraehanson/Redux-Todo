@@ -46,6 +46,7 @@ function reducer(state = initialState, action) {
           ...state,
           todos: state.todos.filter((todo, index) =>
           action.payload !== index
+        //   style={props.todo.completed ? {textDecoration: 'line-through'} : null}
           )
 
       };
